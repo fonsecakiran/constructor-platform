@@ -10,47 +10,8 @@ export default function Politicas() {
     };
     const [loading, setLoading] = useState(false);
 
-    // Si se necesitara configuración dinámica en el futuro, usar /api/marketplace/config
-    /*
-    useEffect(() => {
-       // ...
-    }, []);
-    */
-
     const storeName = config?.storeName || 'Nuestra Tienda';
     const contactEmail = config?.contactEmail || 'contacto@tienda.com';
-    const primaryColor = '#1f2937'; // Default to dark gray/black implies neutrality, or use config color if available
-
-    if (loading) {
-        return <div className="p-10 text-center">Cargando políticas...</div>;
-    }
-
-    return (
-        <div style={{
-            fontFamily: "'Inter', sans-serif",
-            color: '#1f2937',
-'use client';
-import React, { useEffect, useState } from 'react';
-
-export default function Politicas() {
-    // Para esta página estática global, usaremos valores por defecto del Marketplace
-    const config = {
-        storeName: 'Constructor Marketplace',
-        contactEmail: 'soporte@constructor.com',
-        logoUrl: '' // Opcional
-    };
-    const [loading, setLoading] = useState(false);
-
-    // Si se necesitara configuración dinámica en el futuro, usar /api/marketplace/config
-    /*
-    useEffect(() => {
-       // ...
-    }, []);
-    */
-
-    const storeName = config?.storeName || 'Nuestra Tienda';
-    const contactEmail = config?.contactEmail || 'contacto@tienda.com';
-    const primaryColor = '#1f2937'; // Default to dark gray/black implies neutrality, or use config color if available
 
     if (loading) {
         return <div className="p-10 text-center">Cargando políticas...</div>;
